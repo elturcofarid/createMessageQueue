@@ -1,6 +1,7 @@
 package com.util.message.queue;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,7 +17,8 @@ public class MessageController {
 	private MessageSender sender;
 
 	@RequestMapping(value = "send", method = RequestMethod.POST)
-	public void ejecutar(@RequestBody EmailBody emailBody) {
+	@Async("threadPoolTaskExecutor")
+	public void send(@RequestBody EmailBody emailBody) {
 		sender.send(emailBody);
 	}
 }
