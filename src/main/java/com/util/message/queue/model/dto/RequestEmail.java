@@ -14,7 +14,7 @@ public class RequestEmail {
 	public ArrayList<Object> Headers = new ArrayList<Object>();
 	public boolean TrackOpens;
 	public String TrackLinks;
-	public ArrayList<Object> Attachments = new ArrayList<Object>();
+	public ArrayList<Attachment> Attachments = new ArrayList<Attachment>();
 	public String MessageStream;
 
 
