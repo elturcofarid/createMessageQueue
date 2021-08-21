@@ -11,10 +11,10 @@ public class RequestEmail {
 	public String HtmlBody;
 	public String TextBody;
 	public String ReplyTo;
-	ArrayList<Object> Headers = new ArrayList<Object>();
+	public ArrayList<Object> Headers = new ArrayList<Object>();
 	public boolean TrackOpens;
 	public String TrackLinks;
-	ArrayList<Object> Attachments = new ArrayList<Object>();
+	public ArrayList<Object> Attachments = new ArrayList<Object>();
 	public String MessageStream;
 
 
