@@ -1,4 +1,3 @@
 # createMessageQueue
 
-- Agregar asincronico
-- Validar el proveedor de correo
+Servicio encargado de poner un mensaje en una cola de mensajería
