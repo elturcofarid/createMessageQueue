@@ -1,6 +1,7 @@
 package com.util.message.queue.model.dto;
 
 import java.util.ArrayList;
+import com.util.email.model.Data;
 
 public class RequestEmail {
 
@@ -17,6 +18,24 @@ public class RequestEmail {
 	public ArrayList<Attachment> Attachments = new ArrayList<Attachment>();
 	public String MessageStream;
 
+	public  Data data;
+	public String APiToken;
+
+	public Data getData() {
+		return data;
+	}
+
+	public void setData(Data data) {
+		this.data = data;
+	}
+
+	public String getAPiToken() {
+		return APiToken;
+	}
+
+	public void setAPiToken(String APiToken) {
+		this.APiToken = APiToken;
+	}
 
 	// Getter Methods
 

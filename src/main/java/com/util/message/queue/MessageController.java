@@ -19,4 +19,10 @@ public class MessageController {
 		public void send(@RequestBody RequestEmail emailBody) {
 		sender.send(emailBody);
 	}
+
+
+	@RequestMapping(value = "sendString", method = RequestMethod.POST)
+	public void send(@RequestBody String emailBody) {
+		sender.send(emailBody);
+	}
 }

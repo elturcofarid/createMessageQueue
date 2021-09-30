@@ -29,4 +29,8 @@ public class MessageSender {
 		this.template.convertAndSend(queue.getName(), gson.toJson(message));
 	}
 
+	public void send(String message) {
+		this.template.convertAndSend(queue.getName(), gson.toJson(message));
+	}
+
 }
