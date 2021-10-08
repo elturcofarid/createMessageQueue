@@ -12,5 +12,8 @@ public class ConfigMessage {
 	public RestTemplate restTemplate() {
 	    return new RestTemplate();
 	}
-	
+
+
+
+
 }
