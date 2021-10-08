@@ -1,6 +1,6 @@
 package com.util.message.queue.services.rabbit;
 
-import com.util.message.queue.model.dto.RequestEmail;
+import com.util.message.queue.model.dto.DataRequest;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +25,12 @@ public class MessageSender {
 	@Autowired
 	private Gson gson;
 
-	public void send(RequestEmail message) {
-		this.template.convertAndSend(queue.getName(), gson.toJson(message));
-	}
-
-	public void send(String message) {
-		this.template.convertAndSend(queue.getName(), gson.toJson(message));
+	public void send(DataRequest message) {
+		if (message != null && message.getQueue() != null) {
+			this.template.convertAndSend(message.getQueue(), gson.toJson(message));
+		}else{
+			this.template.convertAndSend(queue.getName(), gson.toJson(message));
+		}
 	}
 
 }
